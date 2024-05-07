@@ -4,10 +4,11 @@ import React from "react";
 import News from "./Component/News.jsx";
 
 const App = () => {
+  const newapi = "b8eabb45ce7f4746a84929c7ef5af279"
   return (
     <div>
       <Navbar />
-      <News pageSize={15} country="in" category="general" />
+      <News pageSize={15} country="in" category="general" newsapi = {newapi} />
     </div>
   );
 };

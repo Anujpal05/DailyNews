@@ -14,7 +14,7 @@ const News = (props) => {
     }, [])
 
     const updateNews = async () => {
-        let url = `https://newsapi.org/v2/top-headlines?country=in&category=${props.category}&apiKey=b8eabb45ce7f4746a84929c7ef5af279&page=${page}&pageSize=${props.pageSize}`;
+        let url = `https://newsapi.org/v2/top-headlines?country=in&category=${props.category}&apiKey=${props.newsapi}&page=${page}&pageSize=${props.pageSize}`;
         setLoading(true);
         let data = await fetch(url);
         let parsedata = await data.json();
