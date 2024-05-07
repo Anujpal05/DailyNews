@@ -3,8 +3,9 @@ import Navbar from "./Component/Navbar.jsx";
 import React from "react";
 import News from "./Component/News.jsx";
 
+
 const App = () => {
-  const newapi = "b8eabb45ce7f4746a84929c7ef5af279"
+  const newapi = process.env.REACT_APP_NEWS_API_KEY
   return (
     <div>
       <Navbar />
