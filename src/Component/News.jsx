@@ -11,7 +11,12 @@ const News = (props) => {
 
     useEffect(() => {
         updateNews();
+        // eslint-disable-next-line
     }, [])
+
+    const title = props.category.charAt(0).toUpperCase() + props.category.slice(1);
+    document.title = "NewsDaily - " + title;
+
 
     const updateNews = async () => {
         let url = `https://newsapi.org/v2/top-headlines?country=in&category=${props.category}&apiKey=${props.newsapi}&page=${page}&pageSize=${props.pageSize}`;
@@ -36,13 +41,13 @@ const News = (props) => {
     return (
 
         <div className='container my-3'>
-            <h1 className='bold font-bold text-center text-2xl m-6'>NewsDaily - Top Headlines</h1>
+            <h1 className='bold font-bold text-center text-2xl m-2'>NewsDaily - Top {title} Headlines</h1>
             {loading && <Spinner />}
 
             {!loading && <><div className='row '>
                 {articles.map((element) => {
                     return <div key={element.url} className="col-md-4">
-                        <NewsItem title={element.title ? element.title.slice(0, 60) : "Latest news of the day"} description={element.description ? element.description.slice(0, 127) : "For more information click on Read more"} imgurl={element.urlToImage ? element.urlToImage : "https://images.cnbctv18.com/uploads/2022/04/Adani-Ports.jpg?im=FitAndFill,width=500,height=300"} newsurl={element.url} />
+                        <NewsItem title={element.title ? element.title.slice(0, 60) : "Latest news of the day"} description={element.description ? element.description.slice(0, 127) : "For more information click on Read more"} imgurl={element.urlToImage ? element.urlToImage : "https://images.cnbctv18.com/uploads/2022/04/Adani-Ports.jpg?im=FitAndFill,width=500,height=300"} newsurl={element.url} author={element.author} time={element.publishedAt} />
                     </div>
                 })}
 

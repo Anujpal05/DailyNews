@@ -1,26 +1,29 @@
 import React from 'react';
+import "../App.css"
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
+
   return (
-    <nav className="navbar navbar-expand-lg bg-black text-white">
-      <div className="flex item-center mx-2">
-        <a className="navbar-brand text-white" href="/">NewsDaily</a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="flex" id="navbarNav">
-          <ul className='flex justify-center items-center '>
-            <li className='mx-2' ><a href="/">Home</a></li>
-            <li className='mx-2' ><a href='/sports'>Sports</a></li>
-            <li className='mx-2' ><a href="/entertainment">Entertainment</a></li>
-            <li className='mx-2' ><a href="/health">Health</a></li>
-            <li className='mx-2' ><a href="/science">Science</a></li>
-            <li className='mx-2' ><a href="/business">business</a></li>
-            <li className='mx-2' ><a href="/technology">Technology  </a></li>
+    <nav className="flex justify-between bg-black text-white">
+      <div className="flex item-center p-3 w-screen" id="mainContainer">
+        <Link className="text-xl" to="/">NewsDaily</Link>
+        <div className="mx-6 " >
+          <ul className='flex items-center displaybtn' id="navbarbtns">
+            <li className='mx-2' ><NavLink to="/">Home</NavLink></li>
+            <li className='mx-2' ><NavLink to='/sports'>Sports</NavLink></li>
+            <li className='mx-2' ><NavLink to="/entertainment">Entertainment</NavLink></li>
+            <li className='mx-2' ><NavLink to="/health">Health</NavLink></li>
+            <li className='mx-2' ><NavLink to="/science">Science</NavLink></li>
+            <li className='mx-2' ><NavLink to="/business">Business</NavLink></li>
+            <li className='mx-2' ><NavLink to="/technology">Technology</NavLink></li>
           </ul>
         </div>
       </div>
+      <span className='flex items-center mx-7 text-2xl display '><i className="fa-solid fa-list"></i> </span>
     </nav>
+
+
   );
 }
 
