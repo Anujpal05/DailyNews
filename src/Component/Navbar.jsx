@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom';
 const Navbar = () => {
 
   return (
-    <nav className="flex justify-between bg-black text-white">
+    <nav className="flex justify-between bg-black text-white fixed top-0 z-10 ">
       <div className="flex item-center p-3 w-screen" id="mainContainer">
         <Link className="text-xl" to="/">NewsDaily</Link>
         <div className="mx-6 " >
