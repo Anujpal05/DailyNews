@@ -46,7 +46,6 @@ const News = (props) => {
         <>
             <h1 className='bold font-bold text-center text-2xl pt-20 '>NewsDaily - Top {title} Headlines</h1>
             {loading && <Spinner />}
-
             <InfiniteScroll
                 dataLength={articles.length}
                 next={fetchMoreData}
@@ -55,15 +54,14 @@ const News = (props) => {
             >
 
                 <div className='container'>
-                    <div className='row ' >
-                        {articles.map((element) => {
-                            return <div key={element.url} className="col-md-4">
+                    <div className='row '>
+                        {articles.map((element, index) => {
+                            return <div key={`${element.url}-${index}`} className="col-md-4">
                                 <NewsItem title={element.title ? element.title.slice(0, 60) : "Latest news of the day"} description={element.description ? element.description.slice(0, 127) : "For more information click on Read more"} imgurl={element.urlToImage ? element.urlToImage : "https://images.cnbctv18.com/uploads/2022/04/Adani-Ports.jpg?im=FitAndFill,width=500,height=300"} newsurl={element.url} author={element.author} time={element.publishedAt} />
                             </div>
                         })}
                     </div>
                 </div>
-
             </InfiniteScroll>
         </>
     )

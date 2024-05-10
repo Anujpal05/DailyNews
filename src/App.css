@@ -7,8 +7,14 @@
     margin: 0px;
     padding: 0px;
 }
+
 .display{
     display: none;
+}
+
+.displaybtn{
+    display: flex;
+    flex-direction: row;
 }
 
 .active{
@@ -21,6 +27,16 @@
         display: block;
     }
     .displaybtn{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-top: 7px;
+    }
+    #mainContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .btndisplay{
         display: none;
     }
 }
