@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Daily News
+Welcome to Daily News, a responsive web application that provides daily updated news in various categories such as sports, health, technology, business, and more. This project utilizes the News API to fetch the latest news articles and includes features like infinite scrolling, a top-loading bar.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+- **Daily News Updates:** Get the latest news articles updated daily.
+- **News Categories:** Browse news by different categories like sports, health, technology, business, etc.
+- **Infinite Scrolling:** Automatically load more articles as you scroll down.
+- **Top-Loading Bar:** Visual indicator for page loading.
+- **Responsive Design:** Optimized for various devices and screen sizes.
 
-## Available Scripts
+##  Technologies Used
+- **React:** For building the user interface.
+- **News API:** For fetching updated news articles.
+- **React Router:** For seamless navigation.
+- **CSS:** For styling the components.
+- **React Infinite Scroller:** For infinite scrolling functionality.
+- **React Top Loading Bar:** For the top-loading bar indicator.
 
-In the project directory, you can run:
+## Setup
+To run this project locally, follow these steps:
 
-### `npm start`
+### Clone the repository:
+```bash
+git clone https://github.com/Anujpal05/DailyNews.git
+cd dailynews
+```
+### Install dependencies:
+```bash
+npm install
+```
+### Set up environment variables:
+Create a .env file in the root directory and add your environment variables:
+```env
+REACT_APP_NEWS_API_KEY=your_news_api_key
+```
+### Start the development server:
+```bash
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Open your browser and navigate to:
+```arduino
+http://localhost:3000
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage
+- **Browse News:** Navigate through different news categories.
+- **Infinite Scrolling:** Scroll down to load more articles automatically.
+- **Top-Loading Bar:** See a loading bar at the top during page transitions.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgments
+Thank you for visiting this project.
